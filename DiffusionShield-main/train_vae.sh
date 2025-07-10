@@ -1,0 +1,14 @@
+CUDA_VISIBLE_DEVICES=0 python LDM/main.py \
+  --trainset 'cifar10_bird_train' \
+  --testset 'cifar10_bird_test'\
+  --image_size 32 \
+  --patch_size 4 \
+  --budget 0.007 \
+  --epsilon 0.01 \
+  --B 4 \
+  --epoch_num 40 \
+  --batch_size 16 \
+  --test_batch_size 64 \
+  --augment_type "None" \
+  --patches_save_path "./trained_patches/wm_patches_vae.pt" \
+  --model_save_path "./trained_model/classifier_vae.pt"
